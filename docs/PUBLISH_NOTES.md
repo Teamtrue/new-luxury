@@ -50,7 +50,10 @@ Target repo: `Teamtrue/new-luxury`
   - `packages/shared`, `packages/config`, and `packages/db` source/config files.
   - `apps/worker` source/config files.
   - Full `apps/mobile` Expo source/config shell.
-- Direct local Git push remains blocked by missing local GitHub HTTPS credentials and missing SSH deploy key.
+  - `apps/web` config, environment example, Next.js config, Tailwind config, service worker, instrumentation, and root layouts.
+  - `apps/web` core web libraries for env assertions, Razorpay verification, Supabase clients, audit logging, RBAC, sessions, OTP, CSRF, security headers, rate limiting, validation, and utility helpers.
+  - `apps/web` first unit tests for pagination, Razorpay signatures, and security token helpers.
+- Direct local Git push remains blocked by missing local GitHub HTTPS credentials and missing SSH deploy key. Connector publishing is being used instead.
 
 ### Known Non-Blocking Gaps
 
@@ -66,8 +69,7 @@ Target repo: `Teamtrue/new-luxury`
 
 ### Next Publish Target
 
-- Upload `apps/web` foundation, tests, and API/page source layers through the GitHub connector.
-- First checkpoint is complete locally: root `pnpm typecheck`, `pnpm lint`, `pnpm test`, and `pnpm build` pass.
+- Finish uploading `apps/web` provider adapters, database migrations, API routes, pages, and components through the GitHub connector.
 - Push the prepared local commits once local GitHub credentials or an SSH deploy key are available.
 - Apply migrations `001` through `008` against a disposable database; keep `packages/db/migrations` as canonical and verify `apps/web/supabase/migrations` stays mirrored.
 - Complete payment webhook replay tests and membership activation tests.
