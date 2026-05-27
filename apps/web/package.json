@@ -1,0 +1,44 @@
+{
+  "name": "@plutusclub/web",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "typecheck": "tsc --noEmit",
+    "lint": "next lint",
+    "test": "vitest run",
+    "test:coverage": "vitest run --coverage"
+  },
+  "dependencies": {
+    "@plutusclub/shared": "workspace:*",
+    "@supabase/ssr": "^0.5.1",
+    "@supabase/supabase-js": "^2.45.0",
+    "bcryptjs": "^3.0.3",
+    "clsx": "^2.1.1",
+    "date-fns": "^3.6.0",
+    "next": "14.2.29",
+    "nodemailer": "^8.0.8",
+    "razorpay": "^2.9.4",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "^3.0.0",
+    "@types/node": "^20.14.0",
+    "@types/nodemailer": "^8.0.0",
+    "@types/react": "^18.3.1",
+    "@types/react-dom": "^18.3.0",
+    "@typescript-eslint/eslint-plugin": "^8.49.0",
+    "@typescript-eslint/parser": "^8.49.0",
+    "autoprefixer": "^10.4.20",
+    "eslint": "^8.57.0",
+    "eslint-config-next": "14.2.29",
+    "postcss": "^8.4.41",
+    "tailwindcss": "^3.4.7",
+    "typescript": "^5.5.4",
+    "vitest": "^2.1.8"
+  }
+}
