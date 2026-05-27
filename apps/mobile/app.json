@@ -1,0 +1,65 @@
+{
+  "expo": {
+    "name": "PlutusClub",
+    "slug": "plutusclub",
+    "version": "1.0.0",
+    "scheme": "plutusclub",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "assetBundlePatterns": ["**/*"],
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "extra": {
+      "API_BASE_URL": "http://localhost:3000",
+      "RAZORPAY_KEY_ID": "",
+      "SENTRY_DSN": "",
+      "ios_payment_disabled": false
+    },
+    "android": {
+      "package": "in.plutusclub.app",
+      "versionCode": 1,
+      "permissions": ["INTERNET", "RECEIVE_BOOT_COMPLETED", "VIBRATE"],
+      "googleServicesFile": "./google-services.json",
+      "intentFilters": [
+        {
+          "action": "VIEW",
+          "autoVerify": true,
+          "data": [
+            {
+              "scheme": "https",
+              "host": "plutusclub.in"
+            }
+          ],
+          "category": ["BROWSABLE", "DEFAULT"]
+        }
+      ],
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#0A0A12"
+      }
+    },
+    "ios": {
+      "bundleIdentifier": "in.plutusclub.app",
+      "buildNumber": "1",
+      "supportsTablet": true,
+      "config": {
+        "googleServicesFile": "./GoogleService-Info.plist"
+      },
+      "infoPlist": {
+        "NSFaceIDUsageDescription": "Use Face ID to unlock PlutusClub securely"
+      },
+      "entitlements": {
+        "aps-environment": "production"
+      },
+      "associatedDomains": ["applinks:plutusclub.in"]
+    },
+    "plugins": [
+      "expo-secure-store",
+      "expo-font",
+      "expo-local-authentication",
+      "expo-notifications",
+      "expo-updates"
+    ]
+  }
+}
