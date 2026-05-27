@@ -44,8 +44,13 @@ Target repo: `Teamtrue/new-luxury`
   - `81c791e` — `super man 🦸‍♂️: harden production checkpoint`
 - Clean source file count prepared for publish: 214 files.
 - Generated folders were excluded: `node_modules`, `.next`, `dist`, and `tsconfig.tsbuildinfo`.
+- GitHub connector upload layers completed:
+  - Root workspace files and CI workflow.
+  - Package manifests for web, mobile, worker, shared, config, and db.
+  - `packages/shared`, `packages/config`, and `packages/db` source/config files.
+  - `apps/worker` source/config files.
+  - Full `apps/mobile` Expo source/config shell.
 - Direct local Git push remains blocked by missing local GitHub HTTPS credentials and missing SSH deploy key.
-- GitHub connector is connected and can update repository files, but the currently exposed connector tools do not provide a single bulk push of a local Git commit/tree from disk.
 
 ### Known Non-Blocking Gaps
 
@@ -61,6 +66,7 @@ Target repo: `Teamtrue/new-luxury`
 
 ### Next Publish Target
 
+- Upload `apps/web` foundation, tests, and API/page source layers through the GitHub connector.
 - First checkpoint is complete locally: root `pnpm typecheck`, `pnpm lint`, `pnpm test`, and `pnpm build` pass.
 - Push the prepared local commits once local GitHub credentials or an SSH deploy key are available.
 - Apply migrations `001` through `008` against a disposable database; keep `packages/db/migrations` as canonical and verify `apps/web/supabase/migrations` stays mirrored.
