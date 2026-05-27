@@ -23,13 +23,21 @@ PlutusClub production rebuild: web, admin, backend, workers, and mobile apps.
 
 ## Current Status
 
-Local foundation is in progress and production-directed. Core package checks pass:
+Local foundation is built and production-directed. The clean source tree is prepared locally with 214 source files, excluding generated folders such as `node_modules`, `.next`, `dist`, and TypeScript build info.
 
-- `packages/shared`
-- `packages/config`
-- `packages/db`
+Local verification currently passes:
 
-The full project tree is prepared locally. Normal Git push is currently blocked by missing GitHub credentials in the local environment, so publish notes are kept here until the full tree can be pushed.
+- `pnpm typecheck`
+- `pnpm lint`
+- `pnpm test`
+- `pnpm build`
+
+Prepared local commits:
+
+- `276a4c1` — `super man 🦸‍♂️: publish production foundation`
+- `81c791e` — `super man 🦸‍♂️: harden production checkpoint`
+
+GitHub connector remains connected and repo notes are updated. Direct full-tree Git push from this machine is currently blocked by missing local GitHub HTTPS credentials and missing SSH deploy key.
 
 See:
 
